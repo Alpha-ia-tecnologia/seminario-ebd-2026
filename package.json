@@ -1,0 +1,11 @@
+{
+  "name": "seminario-ebd-2026",
+  "version": "1.0.0",
+  "description": "Landing page do Seminário de EBD 2026",
+  "scripts": {
+    "start": "serve -s . -l 3000"
+  },
+  "dependencies": {
+    "serve": "^14.2.0"
+  }
+}
