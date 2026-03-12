@@ -672,6 +672,12 @@ a {
     overflow: visible;
     transition: all 0.4s var(--ease-out);
     backdrop-filter: blur(10px);
+    position: relative;
+    z-index: 1;
+}
+
+.speaker-card:has(.btn-download-group.open) {
+    z-index: 10;
 }
 
 .speaker-card .speaker-image-wrapper {
@@ -788,6 +794,7 @@ a {
 .btn-download-group {
     position: relative;
     margin-top: 16px;
+    z-index: 10;
 }
 
 .btn-download-group .btn-download {
