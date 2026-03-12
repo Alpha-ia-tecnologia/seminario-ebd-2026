@@ -779,6 +779,73 @@ a {
     stroke: var(--accent-300);
 }
 
+/* Download Dropdown */
+.btn-download-group {
+    position: relative;
+    margin-top: 16px;
+}
+
+.btn-download-group .btn-download {
+    margin-top: 0;
+}
+
+.btn-download-group .chevron-icon {
+    transition: transform 0.3s ease;
+    margin-left: 2px;
+}
+
+.btn-download-group.open .chevron-icon {
+    transform: rotate(180deg);
+}
+
+.download-dropdown {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    min-width: 230px;
+    background: rgba(26, 32, 44, 0.95);
+    border: 1px solid rgba(66, 153, 225, 0.25);
+    border-radius: 14px;
+    padding: 6px;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-8px);
+    transition: all 0.3s ease;
+    z-index: 20;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.btn-download-group.open .download-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.download-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 14px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: var(--primary-100);
+    transition: all 0.2s ease;
+    text-decoration: none;
+}
+
+.download-item:hover {
+    background: rgba(66, 153, 225, 0.15);
+    color: var(--accent-300);
+}
+
+.download-item svg {
+    stroke: var(--accent-400);
+    flex-shrink: 0;
+}
+
 /* ===========================
    SCHEDULE SECTION
    =========================== */

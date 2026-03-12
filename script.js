@@ -155,6 +155,17 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // ===========================
+// CLOSE DOWNLOAD DROPDOWNS on outside click
+// ===========================
+document.addEventListener('click', (e) => {
+    document.querySelectorAll('.btn-download-group.open').forEach(group => {
+        if (!group.contains(e.target)) {
+            group.classList.remove('open');
+        }
+    });
+});
+
+// ===========================
 // INIT
 // ===========================
 document.addEventListener('DOMContentLoaded', () => {
